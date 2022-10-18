@@ -1,0 +1,31 @@
+{
+  "name": "alluda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PivotalSaint/alluda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PivotalSaint/alluda/issues"
+  },
+  "homepage": "https://github.com/PivotalSaint/alluda#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7",
+    "jest": "^29.2.1",
+    "mysql2": "^2.3.3",
+    "node": "^18.11.0"
+  }
+}
