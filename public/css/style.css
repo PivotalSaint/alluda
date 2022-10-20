@@ -899,13 +899,12 @@ nav a:hover {
 
 
 .bio-content {
-  width: 75%;
+  width: 100%;
   display: inline-block;
-  margin-left: 20px;
 }
 
 .bio {
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Quicksand', sans-serif;
