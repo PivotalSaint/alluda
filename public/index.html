@@ -11,48 +11,67 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <title>AlludaHomepage</title>
   </head>
-  <body class="hero is-fullheight">
-    <header class="hero-head ml-6 mr-6 title is-size-12 has-text-blue is-bold mt-6 is-info">
+  <body class="hero background is-fullheight" id="body">
+    <header
+      class="background is-info hero-head ml-6 mr-6 title is-size-12 has-text-blue is-bold mt-6 is-info"
+    >
       alluda!
       <nav>
         <!-- links go here -->
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
           href=""
-        >Certified Health Providers</button>
+        >
+          Certified Health Providers
+        </button>
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
           href=""
-        >Media Resources</button>
+        >
+          Media Resources
+        </button>
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
           href="/public/notesAssets/index.html"
-        >Journal Log</button>
+        >
+          Journal Log
+        </button>
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
           href="/public/assets/about-us.html"
-        >About Us</button>
+        >
+          About Us
+        </button>
       </nav>
     </header>
 
-    <section class="hero-body">
-      <div class="columns col-4 ml-6 mr-6">
-        <h1 class="col-6 title is-bold is-size-6 has-text-medium has-text-centered">"Aiding in Mental Health Support"</h1>
-        <p class="ml-6 mr-6 subtitle has-text-black column col-6">
-          Word from the authors: Mental health is a serious issue in today's
-          fast pace society. This application helps in making people put their
-          needs first in their mental health. Disclaimer: alluda! is not a
-          certified mental healthcare provider. The authors made this page to
-          help in people finding time to free resources. If you are in actual
-          need of medical help, call 911 or reach out to the proper healthcare
-          providers.
-        </p>
-
-        <!-- took a while to remember how to pseudo code in html-->
-        <!-- this will be the main body-->
+    <section class="hero-body rows">
+      <div class="row-12">
+        <h1 class="title is-bold is-size-6 has-text-medium has-text-centered">
+          "Aiding in Mental Health Support"
+        </h1>
+        <div class="rows">
+          <p
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+          >
+            Word from the authors: Mental health is a serious issue in today's
+            fast pace society. This application helps in making people put their
+            needs first in their mental health.
+          </p>
+          <p
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+          >
+            Disclaimer: alluda! is not a certified mental healthcare provider.
+            The authors made this page to help in people finding time to free
+            resources. If you are in actual need of medical help, call 911 or
+            reach out to the proper healthcare providers.
+          </p>
+          <!-- took a while to remember how to pseudo code in html-->
+          <!-- this will be the main body-->
+        </div>
       </div>
     </section>
-    <footer class="hero-foot has-background-dark mp-12">
+    <footer class="hero-foot has-background-dark">
       <div class="content has-text-centered has-text-white">
         <p>
           <strong class="has-text-white">Mental Health Advocates</strong>:
