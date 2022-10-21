@@ -3,8 +3,8 @@ const express = require("express");
 const PORT = process.env.PORT || 3350;
 
 const app = express();
-const apiRoutes = require("../alluda/routes/apiRoutes");
-const htmlRoutes = require("../alluda/routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
