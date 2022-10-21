@@ -1,7 +1,7 @@
 const Sequalize = require('sequalize');
 
-require('dotenv').config();
+//require('dotenv').config();
 
-let sequalize;
+//let sequalize;
 
-if (process.env.)
+//if (process.env.);
