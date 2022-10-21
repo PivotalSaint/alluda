@@ -915,6 +915,7 @@ nav a:hover {
 
 .bio-content img {
   max-height: 200px;
+  max-width: 200px;
   border: 1px, solid, whitesmoke
 }
 
