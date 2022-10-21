@@ -92,6 +92,13 @@ nav a:hover {
   background-color: var(--dark);
 }
 
+body {
+  background-image: url('../images/alluda-background.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  
+}
+
 .page-title {
   text-align: center;
   width: 100%;
@@ -879,6 +886,55 @@ nav a:hover {
   flex: 0 0 100%;
 }
 
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 25px;
+}
+
+.about-us-body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #A3CCBE;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.bio-content {
+  width: 100%;
+  display: inline-block;
+}
+
+.bio {
+    margin: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #8399A8;
+    color: #FFFFF0;
+    border: 1px, solid, black;
+}
+
+.bio-content img {
+  max-height: 200px;
+  max-width: 200px;
+  border: 1px, solid, whitesmoke
+}
+
+.bio h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #E6DFAF;;
+  font-style: italic;
+  display: inline-block;
+}
+
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-auto {
@@ -1106,4 +1162,3 @@ nav a:hover {
     flex: 0 0 100%;
   }
 }
-
