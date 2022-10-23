@@ -6,7 +6,7 @@ const {
   validateNote,
   deleteNote,
   getAllNotes,
-} = require("../../public/notesAssets/noteTaker");
+} = require("../../lib/noteTaker.js");
 
 router.get("/notes", (req, res) => {
   let results = getAllNotes().notes;

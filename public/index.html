@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='viewport" content="width=device-width, initial-scale=1.0' />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/public/css/style.css" />
     <title>Alluda Homepage</title>
   </head>
@@ -47,48 +48,116 @@
           About Us</a>
         </button>
 
+=======
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>alluda!WelcomeHome</title>
+  </head>
+  <body>
+    <header
+      class="hero-head"
+      class="ml-6 mr-2 title is-size-12 has-text-large is-bold mt-6 is-info">
+      <nav class="rows">
+        <!-- links go here -->
+        <h1 class="has-text-left ml-2 has-text-white is-bold title">alluda!</h1>
+        <a
+          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
+          href="/get-help"
+        >
+          Certified Providers
+        </a>
+        <a
+          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
+          href="/media"
+        >
+          Media Resources
+        </a>
+        <a
+          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
+          href="/notes"
+          id="getNotes"
+        >
+          Journal Log
+        </a>
+        <a
+          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
+          href="/about-us"
+          id="getAboutUs"
+        >
+          About Us
+        </a>
+>>>>>>> 78084f7c9c83f34090165d1726ebd9aa52c5b9bb
       </nav>
     </header>
-
-    <section class="hero-body rows">
+    <section class="rows hero-body">
       <div class="row-12">
-        <h1 class="title is-bold is-size-6 has-text-medium has-text-centered">
+        <h1
+          class="box title is-bold is-size-6 has-text-black has-text-centered"
+        >
           "Aiding in Mental Health Support"
         </h1>
-        <div class="rows">
+        <div class="rows message">
           <p
-            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+            class="box message-head background is-info is-bold has-text-black is-size-6"
           >
-            Word from the authors: Mental health is a serious issue in today's
-            fast pace society. This application helps in making people put their
-            needs first in their mental health.
+            Word from the authors:
           </p>
           <p
-            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+            class="message-body row-6 subtitle has-text-black col-12 text-is-centered"
           >
+<<<<<<< HEAD
             Disclaimer: Alluda! is not a certified mental healthcare provider.
             The authors made this page to help in people finding time to free
             resources. If you are in actual need of medical help, call 911 or
             reach out to the proper healthcare providers.
+=======
+            Mental health is a serious issue in today's fast pace society. This
+            application helps in making people put their needs first in their
+            mental health.
+          </p>
+        </div>
+        <div class="rows message">
+          <p class="box message-head is-bold has-text-black is-size-6">
+            Disclaimer:
+          </p>
+          <p
+            class="message-body row-6 subtitle has-text-black col-12 has-text-centered"
+          >
+            alluda! is not a certified mental healthcare provider. The authors
+            made this page to help in people finding time to free resources. If
+            you are in actual need of medical help, call 911 or reach out to the
+            proper healthcare providers.
+>>>>>>> 78084f7c9c83f34090165d1726ebd9aa52c5b9bb
           </p>
           <!-- took a while to remember how to pseudo code in html-->
           <!-- this will be the main body-->
         </div>
       </div>
     </section>
-    <footer class="hero-foot has-background-dark">
-      <div class="content has-text-centered has-text-white">
+    <footer class="has-background-dark" id="footer">
+      <div class="hero-foot content flex:1 has-text-centered has-text-white">
         <p>
           <strong class="has-text-white">Mental Health Advocates</strong>:
           <a href="https://github.com/Angel-A15">Angel</a>,<a
             href="https://github.com/mmarsch88"
+<<<<<<< HEAD
             >Matt</a
           ><a href="https://github.com/PivotalSaint"> Jesse</a>, and
           <a href="https://github.com/MarkAnthony9014">Mark</a> sourcing:
           <a href="https://github.com/PivotalSaint/Alluda">GitHub</a>.
+=======
+          >
+            Matt,</a
+          ><a href="https://github.com/PivotalSaint"> Jesse, </a> and
+          <a href="https://github.com/MarkAnthony9014"> Mark</a> SOURCING:
+          <a href="https://github.com/PivotalSaint/alluda">GitHub</a>.
+>>>>>>> 78084f7c9c83f34090165d1726ebd9aa52c5b9bb
         </p>
       </div>
     </footer>
-    <script href="/server.js"></script>
+    <script href="../server.js"></script>
   </body>
 </html>
