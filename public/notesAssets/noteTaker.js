@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const router = require('../../routes/apiRoutes');
 
 function filterByQuery(query, notes) {
     let confirmedNotes = [];
@@ -20,7 +21,7 @@ function createNewNote(body, notes) {
     const noteList = body;
     notes.push(noteList);
     fs.writeFileSync(
-        path.join(__dirname, '../db/dbNotes.json'),
+        path.join(__dirname, '../db/db.json'),
         JSON.stringify({ notes: notes })
     );
     return notes;
@@ -38,7 +39,7 @@ function deleteNote (id) {
     const filteredNotes = getAllNotes().notes.filter(note => note.id !== parseInt(id)); 
 
     fs.writeFileSync(
-        path.join(__dirname, '../db/dbNotes.json'),
+        path.join(__dirname, '../db/db.json'),
         JSON.stringify({ notes: filteredNotes })
     );
     return filteredNotes;
@@ -46,7 +47,7 @@ function deleteNote (id) {
 
 function getAllNotes(){
     const notes = fs.readFileSync(
-        path.join(__dirname, '../db/dbNotes.json'),
+        path.join(__dirname, '../db/db.json'),
         "utf8"
     );
     
@@ -54,11 +55,4 @@ function getAllNotes(){
     return parsedNotes;
 };
 
-module.exports = {
-    filterByQuery,
-    findById,
-    createNewNote,
-    validateNote,
-    deleteNote,
-    getAllNotes
-};
+module.exports = router;
