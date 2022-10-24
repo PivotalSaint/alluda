@@ -19,13 +19,16 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
   color: var(--secondary);
   line-height: 1.5;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 h1,
@@ -34,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   margin: 5px 0;
   color: var(--secondary);
@@ -93,10 +96,9 @@ nav a:hover {
 }
 
 body {
-  background-image: url('../images/alluda-background.jpg');
+  background-image: url('../images/alludaImg.jpg');
   background-size: cover;
   min-height: 100vh;
-  
 }
 
 .page-title {
@@ -175,13 +177,13 @@ body {
   border-radius: var(--border-radius);
 }
 
-[type='radio']:checked,
-[type='radio']:not(:checked) {
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-[type='radio']:checked + label,
-[type='radio']:not(:checked) + label {
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
@@ -191,9 +193,9 @@ body {
   margin-right: 0.2rem;
 }
 
-[type='radio']:checked + label:before,
-[type='radio']:not(:checked) + label:before {
-  content: '';
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -203,9 +205,9 @@ body {
   border-radius: 100%;
   background: #fff;
 }
-[type='radio']:checked + label:after,
-[type='radio']:not(:checked) + label:after {
-  content: '';
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
   width: 12px;
   height: 12px;
   background-color: var(--secondary);
@@ -217,13 +219,13 @@ body {
   transition: all 0.2s ease;
 }
 
-[type='radio']:not(:checked) + label:after {
+[type="radio"]:not(:checked) + label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-[type='radio']:checked + label:after {
+[type="radio"]:checked + label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -900,10 +902,9 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #A3CCBE;
-  font-family: 'Quicksand', sans-serif;
+  background-color: #a3ccbe;
+  font-family: "Quicksand", sans-serif;
 }
-
 
 .bio-content {
   width: 100%;
@@ -911,29 +912,28 @@ body {
 }
 
 .bio {
-    margin: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #8399A8;
-    color: #FFFFF0;
-    border: 1px, solid, black;
+  margin: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #8399a8;
+  color: #fffff0;
+  border: 1px, solid, black;
 }
 
 .bio-content img {
   max-height: 200px;
   max-width: 200px;
-  border: 1px, solid, whitesmoke
+  border: 1px, solid, whitesmoke;
 }
 
 .bio h2 {
   margin-bottom: 20px;
   font-size: 36px;
-  color: #E6DFAF;;
+  color: #e6dfaf;
   font-style: italic;
   display: inline-block;
 }
-
 
 /* col-sm */
 @media screen and (min-width: 640px) {
