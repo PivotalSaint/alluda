@@ -103,8 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-views/
 .vscode
-=========
-views/
->>>>>>>>> Temporary merge branch 2
+
