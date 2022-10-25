@@ -22,13 +22,13 @@ app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
 
 
-sequelize.sync({ force: false }).then(() => {
+// sequelize.sync({ force: false }).then(() => {
 
-  app.listen(PORT, () => console.log(`Now listening`));
+//   app.listen(PORT, () => console.log(`Now listening`));
 
-});
-
-
-// app.listen(PORT, () => {
-//   console.log(`API server now on port ${PORT}!`);
 // });
+
+
+app.listen(PORT, () => {
+  console.log(`API server now on port ${PORT}!`);
+});
