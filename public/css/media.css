@@ -1,7 +1,5 @@
-#widthSize {
-    width: 45%;
+#bodyClr {
+    background-image: none;
+    background-color: rgb(221, 210, 232);
 }
 
-#bckclr {
-    background-color:transparent;
-}
