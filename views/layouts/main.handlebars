@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="/public/css/style.css" />
     <link
       rel="stylesheet"
@@ -11,45 +13,55 @@
     />
     
     <title>Alluda Homepage</title>
+
   </head>
 
   <body class="hero background is-fullheight" id="body">
+
     <header
       class="background is-info hero-head ml-6 mr-6 title 
       is-size-12 has-text-blue is-bold mt-5 is-info"
     >
       <h1 class="columns mt-4 has-text-white is-centered">Alluda!</h1>
+      
       <nav class="columns is-centered mb-4">
-        {{#if loggedIn}}
+
         <!-- links go here -->
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
-          href=""
-        >
+          href="">
+
           Certified Health Providers
         </button>
+
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
-          href=""
-        >
+          href="">
+
           Media Resources
         </button>
+
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
-          href="/public/notesAssets/index.html"
-        >
+          href="/public/notesAssets/index.html">
+
           Journal Log
         </button>
-        <button
-          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
-          href="/public/assets/about-us.html"
-        >
+
+        <button id="applyBtn" {{#if deadlinePassed}} diabled
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+
+          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6 btn btn-info"
+          href="/public/assets/about-us.html">
+
           About Us
+
         </button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+
       </nav>
+
     </header>
 
     <section class="hero-body rows">
@@ -95,6 +107,7 @@
     <script href="/server.js"></script>
     
   </body>
+
 </html>
 
 {{#if loggedIn}}

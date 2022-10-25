@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const router = require('express').Router();
 
 require('dotenv').config();
 
@@ -10,3 +11,4 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     port:3350
 });
 
+module.exports = router;
