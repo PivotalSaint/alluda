@@ -22,4 +22,8 @@ router.get('/get-help', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/assets/get-help.html'));
 });
 
+router.get('/have-laugh', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/assets/have-laugh.html'));
+  });
+
 module.exports = router;

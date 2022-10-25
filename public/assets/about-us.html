@@ -12,96 +12,116 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>alluda!WelcomeHome</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>alluda!About-the-Authors</title>
   </head>
   <body>
     <header
       class="hero-head"
       class="ml-6 mr-2 title is-size-12 has-text-large is-bold mt-6 is-info">
-      <a class='title mb-2 ml-2 mt-2 has-text-left ml-2 has-text-white' href='/'>alluda!</a>
+      <a class="has-text-left ml-2 has-text-white is-bold title" href="/">alluda!</a>
       <nav class="rows">
         <!-- links go here -->
         <a
-          class='button is-focused is-normal is-responsive mb-2 ml-2 mt-2'
-          href="./get-help.html"
+          class="button is-focused is-normal is-responsive mb-2 ml-2"
+          href="/get-help"
+          id="getHelp"
         >
           Certified Providers
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
-          href="./media.html"
+          class="button is-focused is-normal is-responsive mb-2 ml-2"
+          href="/media"
+          id="getMedia"
         >
           Media Resources
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
-          href="../notesAssets/notes.html"
+          class="button is-focused is-normal is-responsive mb-2 ml-2"
+          href="/notes"
           id="getNotes"
         >
           Journal Log
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 ml-2 mt-2"
-          href="./about-us.html"
+          class="button is-focused is-normal is-responsive mb-2 ml-2"
+          href="/about-us"
           id="getAboutUs"
         >
           About Us
         </a>
+        <a
+        class="button is-focused is-normal is-responsive mb-2 ml-2"
+        href="/have-laugh"
+        id="getLaugh"
+      >
+        Laughing Therapy
+      </a>
       </nav>
     </header>
-<body class="about-us-body">
-    <section class="bio-content">
-        <article id="jesse-bio" class="bio">
-            <img src="../images/jessevanwinkle.jpg" alt="A photo of Jesse Van Winkle" class="float-left" />
-            <h2 class="bio-h2">Jesse Van Winkle</h2>
-            <p>
-                Jesse (also known under the moniker, Pivitol Saint) is from San Antonio, Texas. 
-                He is a family man who is devoted to philanthropic causes, art, and software development. 
-            </p>
-        </article>
 
-        <article id="matt-bio" class="bio">
-            <img src="../images/solidsnake.JPG" alt="A photo of Matt Marsch" class="float-left" />
-            <h2 class="bio-h2">Matt Marsch</h2>
-            <p>
-                Information about Matt goes here!
-            </p>
-        </article>
-        <br/>
-        <article id="angel-bio" class="bio">
-            <img src="../images/angelguerrero.jpg" alt="A photo of Angel Aguilar Guerrero" />
-            <h2 class="bio-h2">Angel Aguilar Guerrero</h2>
-            <p>
-                Information about Angel goes here! 
-            </p>
-        </article>
-        <br/>
-        <article id="mark-bio" class="bio">
-            <img src="../images/markmartinez.jpg" alt="A photo of Mark Martinez"  />
-            <h2 class="bio-h2">Mark Martinez</h2>
-            <p>
-              Mark is devoted to the cause of mental health because of his own personal battle with his own mental health struggles.
-              He is a musician, a father, an avid basketball lover, and a software developer using his powers for good!
-            </p>
-        </article>
-    </section> 
+    <section class="row-3 hero-body">
+
+        <div class="columns flex-1 is-mobile is-centered is-vcentered border has-background-success-light mt-2">
+            <div class="column">
+              <img class="image is-128x128" src="../images/jessevanwinkle.jpg" alt="">
+            </div>
+            <div class="column">
+              <span class="title">Jesse Van Winkle</span><br>
+              <span class="subtitle">Jesse (also known under the moniker, Pivitol Saint) is from Texas. He
+                is a family man who is devoted to philanthropic causes, art, and
+                software development.</span>
+            </div>
+          </div>
+
+          <div class="columns is-mobile is-centered is-vcentered border has-background-success-light mt-2">
+            <div class="column">
+              <img class="image is-128x128" src="../images/solidsnake.JPG" alt="">
+            </div>
+            <div class="column">
+              <span class="title">Matt Marsch</span><br>
+              <span class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quidem voluptates quis commodi ut facilis, quas maxime nisi, minus totam magnam saepe alias inventore ratione perferendis itaque velit consectetur quibusdam?</span>
+            </div>
+          </div>
+
+          <div class="columns is-mobile is-centered is-vcentered border has-background-success-light mt-2">
+            <div class="column">
+              <img class="image is-128x128" src="../images/angelguerrero.jpg" alt="">
+            </div>
+            <div class="column">
+              <span class="title">Angel Guerrero</span><br>
+              <span class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro, at reiciendis amet asperiores vero, impedit illo commodi quidem quaerat ea? Eos id libero illum aliquam architecto facilis corporis minus?.</span>
+            </div>
+          </div>
+
+          <div class="columns is-mobile is-centered is-vcentered border has-background-success-light mt-2">
+            <div class="column">
+              <img class="image is-128x128" src="../images/markmartinez.jpg" alt="">
+            </div>
+            <div class="column">
+              <span class="title">Mark Martinez</span><br>
+              <span class="subtitle">Mark is devoted to the cause of mental health because of his own
+                personal battle with his own mental health struggles. He is a
+                musician, a father, an avid basketball lover, and a software developer
+                using his powers for good!</span>
+            </div>
+          </div>
+    </section>
+
     <footer class="has-background-dark" id="footer">
-        <div class="hero-foot content flex:1 has-text-centered has-text-white">
-          <p>
-            <strong class="has-text-white">Mental Health Advocates</strong>:
-            <a href="https://github.com/Angel-A15">Angel</a>,<a
-              href="https://github.com/mmarsch88"
-            >
-              Matt,</a
-            ><a href="https://github.com/PivotalSaint"> Jesse, </a> and
-            <a href="https://github.com/MarkAnthony9014"> Mark</a> SOURCING:
-            <a href="https://github.com/PivotalSaint/alluda">GitHub</a>.
-          </p>
-        </div>
-      </footer>
-<script href="/server.js"></script>
-
-</body>
-
+      <div class="hero-foot content flex:1 has-text-centered has-text-white">
+        <p>
+          <strong class="has-text-white">Mental Health Advocates</strong>:
+          <a href="https://github.com/Angel-A15">Angel</a>,<a
+            href="https://github.com/mmarsch88"
+          >
+            Matt,</a
+          ><a href="https://github.com/PivotalSaint"> Jesse, </a> and
+          <a href="https://github.com/MarkAnthony9014"> Mark</a> SOURCING:
+          <a href="https://github.com/PivotalSaint/alluda">GitHub</a>.
+        </p>
+      </div>
+    </footer>
+    <script href="../server.js"></script>
+  </body>
 </html>
