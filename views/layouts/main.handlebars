@@ -36,7 +36,7 @@
 
         <button
           class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6"
-          href="">
+          href="../../public/assets/media.html">
 
           Media Resources
         </button>
@@ -47,8 +47,19 @@
 
           Journal Log
         </button>
+        
+        <nav>
+          {{#if loggedIn}}
+          <a href="/dashboard">dashboard</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
 
-        <button id="applyBtn" {{#if deadlinePassed}} diabled
+        <button id="applyBtn" 
+          {{#if deadlinePassed}} 
+          diabled
           {{else}}
           <a href="/login">login</a>
           {{/if}}
