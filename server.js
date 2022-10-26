@@ -1,17 +1,19 @@
 const express = require("express");
 const path = require('path');
-const exphbs = require('express-handlebars');
+
 const routes = require('./routes');
-const sequelize = require('./config/connection');
 const session = require('express-session');
 const helpers = require('./utils/helpers');
-
-
-const PORT = process.env.PORT || 3306;
-
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const exphbs = require('express-handlebars');
 
 const app = express();
+const PORT = process.env.PORT || 3306;
+
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+
+
 const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 
@@ -25,9 +27,9 @@ const sess= {
   })
 };
 
-app.use(session(sess));
-
 const hbs = exphbs.create({ helpers });
+
+app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.use(express.urlencoded({ extended: true }));
@@ -41,13 +43,8 @@ app.use("/", htmlRoutes);
 
 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
 
-app.listen(PORT, () => console.log(`Now listening`));
+  app.listen(PORT, () => console.log(`Now listening`));
 
-});
-
-
-app.listen(PORT, () => {
-  console.log(`API server now on port ${PORT}!`);
 });
