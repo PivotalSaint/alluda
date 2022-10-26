@@ -57,19 +57,9 @@
           {{/if}}
         </nav>
 
-        <button id="applyBtn" 
-          {{#if deadlinePassed}} 
-          diabled
-          {{else}}
-          <a href="/login">login</a>
-          {{/if}}
-
-          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6 btn btn-info"
-          href="/public/assets/about-us.html">
-
-          About Us
-
-        </button>
+        <button id="applyBtn" class="btn btn-info button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6" 
+        href="/public/assets/about-us.html"
+        {{#if deadlinePassed}} disabled {{/if}}>About Us</button>
 
       </nav>
 

@@ -1,70 +1,162 @@
-// const { Model, DataTypes } = require('sequelize');
-// const sequelize = require('../config/connection');
-// const bcrypt = require('bcrypt');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-// //User Models
-// class User extends Model {
-//     checkPassword(loginPw) {
-//         return bcrypt.compareSync(loginPw, this.password);
-//     }
-// }
 
-// //Tables columns and configuraton
-// User.init(
-//     {
-//         //Table Definitions
-//         id: {
-//             type: DataTypes.INTEGER,
-//             allowNull: false,
-//             primaryKey: true,
-//             autoIncrement: true
-//         },
-        
-//         username: {
-//             type: DataTypes.STRING,
-//             allowNull: false
-//         },
+// get all users
+router.get('/', (req, res) => {
+  User.findAll({
+    attributes: { exclude: ['password'] }
+  })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-//         email: {
-//             type: DataTypes.STRING,
-//             allowNull: false,
-//             unique: true,
-//             validate: {
-//                 isEmail: true
-//             }
-//         },
+router.get('/:id', (req, res) => {
+  User.findOne({
+    attributes: { exclude: ['password'] },
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Post,
+        attributes: ['id', 'title', 'post_url', 'created_at']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'created_at'],
+        include: {
+          model: Post,
+          attributes: ['title']
+        }
+      },
+      {
+        model: Post,
+        attributes: ['title'],
+        through: Vote,
+        as: 'voted_posts'
+      }
+    ]
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-//         //Defines a password column
-//         password: {
-//             type:DataTypes.STRING,
-//             allowNull: false,
-//             validate: {
-//                 len: [4]
-//             }
-//         }
+router.post('/', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
+  })
+    .then(dbUserData => {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+  
+        res.json(dbUserData);
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-//     },
-//     {
-//         hooks:{
-//           // set up beforeCreate lifecycle "hook" functionality
-//           beforeCreate: async (newUserData) =>{
-//             newUserData.password = await bcrypt.hash(newUserData.password, 10);
-//             return newUserData;
-//           },
-    
-//           // set up beforeUpdate lifecycle "hook" functionality
-//           beforeUpdate: async (updatedUserData) =>{
-//             updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-//             return updatedUserData;
-//           }
-//         },
-    
-//         sequelize,
-//         timestamps: false,
-//         freezeTableName: true,
-//         underscored: true,
-//         modelName: 'user'
-//     }
-// );
+router.post('/login', (req, res) => {
+  User.findOne({
+    where: {
+      email: req.body.email
+    }
+  }).then(dbUserData => {
+    if (!dbUserData) {
+      res.status(400).json({ message: 'No user with that email address!' });
+      return;
+    }
 
-// module.exports = User;
+    const validPassword = dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password!' });
+      return;
+    }
+
+    req.session.save(() => {
+      // declare session variables
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+  });
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
+
+router.put('/:id', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+
+  // pass in req.body instead to only update what's passed through
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbUserData => {
+      if (!dbUserData[0]) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+  User.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+module.exports = router;
