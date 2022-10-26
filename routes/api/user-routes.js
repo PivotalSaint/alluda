@@ -3,6 +3,10 @@ const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 const User = require('./User')
 
+const { User} = require('../');
+
+
+// Returns all users
 router.get("/", (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
@@ -14,6 +18,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// Returns one user
 router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
@@ -35,6 +40,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// Will create a user
 router.post("/", (req, res) => {
   User.create({
     username: req.body.username,
@@ -94,6 +100,7 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// Update existing data
 router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -114,6 +121,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// Will delete user
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {

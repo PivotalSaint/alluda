@@ -1,4 +1,4 @@
-Drop DATABASE IF EXISTS alluda_db;
+DROP DATABASE IF EXISTS alluda_db;
 
 CREATE DATABASE alluda_db;
 

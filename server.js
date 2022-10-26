@@ -1,8 +1,8 @@
-const express = require("express");
-const fs = require('fs')
+const express = require('express');
+const routes = require('./routes/index');
 const path = require('path');
+const sequelize = require('./config/connection');
 
-const routes = require('./routes');
 const session = require('express-session');
 const helpers = require('./utils/helpers');
 const exphbs = require('express-handlebars');
@@ -10,7 +10,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3306;
 
-const sequelize = require('./config/connection');
+// imports connection with sequelize
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
@@ -33,8 +33,8 @@ const hbs = exphbs.create({ helpers });
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
@@ -43,9 +43,7 @@ app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
 
 
-
-sequelize.sync({ force: true }).then(() => {
-
-  app.listen(PORT, () => console.log(`Now listening`));
-
+// Establishes connection to the database
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
