@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require('fs')
 const path = require('path');
 
 const routes = require('./routes');
@@ -43,7 +44,7 @@ app.use("/", htmlRoutes);
 
 
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
 
   app.listen(PORT, () => console.log(`Now listening`));
 
