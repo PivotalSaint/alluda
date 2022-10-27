@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes/index');
+const routes = require('./routes/api/indexa.js');
 const path = require('path');
 const sequelize = require('./config/connection');
 

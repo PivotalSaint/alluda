@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
+const sequelize = require("../../config/connection");
 const bcrypt = require("bcrypt");
-const User = require('./User')
+const User = require('../../models/User')
 
-const { User} = require('../');
+// const { User} = require('../');
 
 
 // Returns all users
