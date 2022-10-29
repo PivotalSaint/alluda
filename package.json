@@ -14,5 +14,23 @@
     "mysql2": "^2.3.3",
     "node": "^19.0.0",
     "sequelize": "^6.25.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "alluda",
+  "description": "***An Application Designed For aiding in Mental Health Awareness***",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PivotalSaint/alluda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PivotalSaint/alluda/issues"
+  },
+  "homepage": "https://github.com/PivotalSaint/alluda#readme"
 }
