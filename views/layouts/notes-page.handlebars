@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name='viewport" content="width=device-width, initial-scale=1.0' />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>alluda! Journal Log</title>
+    <title>Alluda-Journal Log</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -19,59 +19,59 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../public/css/notes.css" />
+    <link rel="stylesheet" href="../css/notes.css" />
   </head>
 
   <body>
-      <nav class="navbar navbar-dark bg-dark is-info">
-        <a class='has-text-left is-focused is-width has-text-white title text-size-2 mb-2 mt-2' href='/'>alluda!</a>
+      <nav class="navbar navbar-dark is-info">
+        <a class='has-text-left  is-width has-text-white title text-size-2' href='./homepage.html'>Alluda</a>
 
         <a
-          class="button is-focused is-normal is-responsive mb-2 mt-2"
-          href="/get-help"
+          class="button is-focused is-normal is-responsive mt-5"
+          href="./get-help.html"
         >
           Certified Providers
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 mt-2"
-          href="/media"
+          class="button is-focused is-normal is-responsive mt-5"
+          href="./media.html"
         >
           Media Resources
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 mt-2"
-          href="/notes"
+          class="button is-focused is-normal is-responsive mt-5"
+          href="./notes.html"
           id="getNotes"
         >
           Journal Log
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 mt-2"
-          href="/about-us"
+          class="button is-focused is-normal is-responsive mt-5"
+          href="./about-us.html"
           id="getAboutUs"
         >
           About Us
         </a>
         <a
-          class="button is-focused is-normal is-responsive mb-2 mt-2"
-          href="/have-laugh"
+          class="button is-focused is-normal is-responsive mt-5"
+          href="./have-laugh.html"
           id="getLaugh"
         >
           Laughing Therapy
         </a>
-        <div class="icons">
-          <i class="fas fa-save has-text-black save-note"></i>
-          <i class="fas fa-plus has-text-black new-note"></i>
-        </div>
       </nav>
     <div class="container-fluid">
       <div class="row">
         <div class="col-4 list-container">
-          <div class="card">
+          <div class="card mt-4">
             <ul class="list-group"></ul>
           </div>
         </div>
         <div class="col-8">
+          <div class="icons">
+            <i class="fas fa-save has-text-black save-note"></i>
+            <i class="fas fa-plus has-text-black new-note"></i>
+          </div>
           <input
             class="note-title"
             placeholder="Note Title"
@@ -79,9 +79,10 @@
             type="text"
           />
           <textarea class="note-textarea" placeholder="Note Text"></textarea>
+          
         </div>
       </div>
     </div>
-    <script src="../public/js/notes.js"></script>
+    <script src="../js/notes.js"></script>
   </body>
 </html>
