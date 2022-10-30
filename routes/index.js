@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const htmlRoutes = require('../routes/htmlRoutes');
-const apiRoutes = require("../routes/apiRoutes");
+const apiRoutes = require('../routes/apiRoutes');
 
 router.use("/", htmlRoutes);
 router.use("/api", apiRoutes);
