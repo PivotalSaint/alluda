@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name='viewport" content="width=device-width, initial-scale=1.0' />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <link rel="stylesheet" href="/public/css/style.css" />
-    <title>Alluda-Homepage</title>
+
+    <title>Alluda Homepage</title>
+
   </head>
 
   <body class="hero background is-fullheight" id="body">
-    
+
     <header
-      class="hero-head"
-      class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
+        class="hero-head"
+        class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
 
-      <div class="mt-4">
+        <div class="mt-4">
         
-        <a  class='has-text-left ml-5 has-text-white is-bold title' href='./homepage.html'>Alluda</a>
+            <a  class='has-text-left ml-5 has-text-white is-bold title' href='./homepage.html'>Alluda</a>
 
-      </div>
+        </div>
         
         <nav class="rows">
-            <!-- links go here -->
+
             <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./get-help.html">
-            Certified Providers
+                Certified Providers
             </a>
 
             <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./media.html">
-            Media Resources
+                Media Resources
             </a>
 
             <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./notes.html" id="getNotes">
-            Journal Log
+                Journal Log
             </a>
 
             <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./about-us.html" id="getAboutUs">
-            About Us
+                About Us
             </a>
 
             <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./have-laugh.html" id="getLaugh">
@@ -48,35 +49,38 @@
 
         </nav>
 
-    </header>
-    <section class="rows hero-body">
+  </header>
+
+    <section class="hero-body rows">
+
       <div class="row-12">
-        <h1
-          class="box title is-bold is-size-6 has-text-black has-text-centered"
-        >
-          "Aiding in Mental Health Support"
+        
+        <h1 class="title is-bold is-size-6 has-text-medium has-text-centered" id="hptitle">
+          Aiding in Mental Health Support
         </h1>
-        <div class="rows message">
+        <div class="rows">
           <p
-            class="box message-head background is-info is-bold has-text-black is-size-6"
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
           >
-            Word from the authors:
+            Word from the develepors: "Mental health is a serious issue in today's
+            fast pace society. This application helps in making people put their
+            needs first in their mental health."
           </p>
           <p
-            class="message-body row-6 subtitle has-text-black col-12 text-is-centered"
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
           >
             Disclaimer: Alluda is not a certified mental healthcare provider.
             The authors made this page to help in people finding time to free
             resources. If you are in actual need of medical help, call 911 or
             reach out to the proper healthcare providers.
           </p>
-          <!-- took a while to remember how to pseudo code in html-->
-          <!-- this will be the main body-->
+
         </div>
       </div>
     </section>
-    <footer class="has-background-dark" id="footer">
-      <div class="hero-foot content flex:1 has-text-centered has-text-white">
+
+    <footer class="hero-foot has-background-dark">
+      <div class="content has-text-centered has-text-white">
         <p>
           <strong class="has-text-white">Mental Health Advocates</strong>:
           <a href="https://github.com/Angel-A15">Angel</a>,<a
@@ -88,6 +92,8 @@
         </p>
       </div>
     </footer>
-    <script href="../server.js"></script>
+
+    
   </body>
+
 </html>
