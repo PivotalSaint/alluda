@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
 
     <title>Alluda Homepage</title>
 
@@ -16,87 +16,62 @@
   <body class="hero background is-fullheight" id="body">
 
     <header
-        class="hero-head"
-        class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
+      class="hero-head"
+      class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
 
-        <div class="mt-4">
+      <div class="mt-4">
         
-            <a  class='has-text-left ml-5 has-text-white is-bold title' href='./homepage.html'>Alluda</a>
+        <a  class='has-text-left ml-5 has-text-white is-bold title' href='/'>Alluda</a>
 
-        </div>
+      </div>
         
-        <nav class="rows">
+      <nav class="rows">
 
-            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./get-help.html">
-                Certified Providers
-            </a>
+        <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./get-help.html">
+          Certified Providers
+        </a>
 
-            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./media.html">
-                Media Resources
-            </a>
+        <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="../media-page.handlebars">
+          Media Resources
+        </a>
 
-            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./notes.html" id="getNotes">
-                Journal Log
-            </a>
+        <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./notes.html" id="getNotes">
+          Journal Log
+        </a>
 
-            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./about-us.html" id="getAboutUs">
-                About Us
-            </a>
+        <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./about-us-page.handlebars" id="getAboutUs">
+          About Us
+        </a>
 
-            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./have-laugh.html" id="getLaugh">
-                Laughing Therapy
-            </a>
+        <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./have-laugh.html" id="getLaugh">
+          Laughing Therapy
+        </a>
+        
+          {{#if loggedIn}}
+          <a href="/dashboard">dashboard</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        {{!-- <nav>
+          {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav> --}}
 
-            {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
-            {{else}}
-            <a href="/login">login</a>
-            {{/if}}
-          <nav>
-            {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
-            {{else}}
-            <a href="/login">login</a>
-            {{/if}}
-          </nav>
-
-        {{!-- <button id="applyBtn" class="btn btn-info button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6" 
-        href="../layouts/journal-page.handlebars" id="applyBtn"
+        {{!-- <button id="applyBtn" class="btn btn-info" {{#if deadlinePassed}} disabled {{/if}}>Apply</button>
+        <button id="applyBtn" class="btn btn-info button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6" 
+        href="../notes-page.handlebars"
         {{#if deadlinePassed}} disabled {{/if}}>Journal Log</button> --}}
 
-        </nav>
+      </nav>
 
-  </header>
+    </header>
+    {{{ body }}}
 
-    <section class="hero-body rows">
-
-      <div class="row-12">
-        
-        <h1 class="title is-bold is-size-6 has-text-medium has-text-centered" id="hptitle">
-          Aiding in Mental Health Support
-        </h1>
-        <div class="rows">
-          <p
-            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
-          >
-            Word from the develepors: "Mental health is a serious issue in today's
-            fast pace society. This application helps in making people put their
-            needs first in their mental health."
-          </p>
-          <p
-            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
-          >
-            Disclaimer: Alluda is not a certified mental healthcare provider.
-            The authors made this page to help in people finding time to free
-            resources. If you are in actual need of medical help, call 911 or
-            reach out to the proper healthcare providers.
-          </p>
-
-        </div>
-      </div>
-    </section>
+  
 
     <footer class="hero-foot has-background-dark">
       <div class="content has-text-centered has-text-white">
@@ -112,7 +87,7 @@
       </div>
     </footer>
 
-    
+    <script src="../../public/js/logout.js"></script>
   </body>
 
 </html>

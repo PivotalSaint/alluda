@@ -5,6 +5,7 @@
     "bulma": "^0.9.4",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
+    "eslint-init": "^0.1.12",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
@@ -16,13 +17,14 @@
     "sequelize": "^6.25.3"
   },
   "scripts": {
+    "test": "jest",
     "start": "node server.js"
+
   },
   "name": "alluda",
   "description": "***An Application Designed For aiding in Mental Health Awareness***",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PivotalSaint/alluda.git"
@@ -32,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/PivotalSaint/alluda/issues"
   },
-  "homepage": "https://github.com/PivotalSaint/alluda#readme"
+  "homepage": "https://github.com/PivotalSaint/alluda#readme",
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
 }
