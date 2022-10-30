@@ -1,0 +1,47 @@
+    <header
+      class="hero-head"
+      class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
+
+        <div class="mt-4">
+        
+            <a  class='has-text-left ml-5 has-text-white is-bold title' href='./homepage.html'>Alluda   </a>
+
+        </div>
+        
+        <nav class="rows">
+
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./get-help.html">
+                Certified Providers
+            </a>
+
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./media.html">
+                Media Resources
+            </a>
+
+            {{#if loggedIn}}
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./notes.html" id="getNotes">
+                Journal Log
+            </a>
+            {{else}}
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2"  href="/login" id="getNotes">
+                Journal Log
+            </a>
+            {{/if}}
+
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./about-us.html" id="getAboutUs">
+                About Us
+            </a>
+
+            <a class="button is-focused is-normal is-responsive mb-2 ml-2" href="./have-laugh.html" id="getLaugh">
+                Laughing Therapy
+            </a>
+
+            {{#if loggedIn}}
+                <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+                <a href="/login">login</a>
+            {{/if}}
+
+        </nav>
+
+    </header>
