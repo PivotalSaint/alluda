@@ -22,8 +22,12 @@ router.get('/get-help', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/assets/get-help.html'));
 });
 
-router.get('/have-laugh', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/assets/have-laugh.html'));
+router.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/assets/login.html'));
+  });
+  
+  router.get('/logout', (req, res) => {
+    res.sendFile(path.join(__dirname, '../apiRoutes/logout.js'));
   });
 
 module.exports = router;
