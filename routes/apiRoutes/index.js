@@ -7,6 +7,8 @@ const userRoutes = require("./userRoutes");
 const homeRoutes = require("./homeRoutes");
 
 const postRoutes = require('./postRoutes');
+
+const login = require('../../public/js/login');
 //const getLaugh = require('./getLaugh');
 router.use('/posts', postRoutes)
 router.use('/notes', notesRoutes);

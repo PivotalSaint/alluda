@@ -16,7 +16,7 @@ class Post extends Model {
           'image',
           'title',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
+          [sequelize.literal('(SELECT * FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
         ],
         include: [
           {
@@ -32,6 +32,7 @@ class Post extends Model {
     });
   }
 }
+
 Post.init(
     {
       id: {
