@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 const {
   filterByQuery,
   findById,
@@ -6,7 +6,8 @@ const {
   validateNote,
   deleteNote,
   getAllNotes,
-} = require("../../lib/noteTaker.js");
+} = require('../../lib/noteTaker.js');
+
 
 router.get("/notes", (req, res) => {
   let results = getAllNotes().notes;
@@ -24,7 +25,6 @@ router.get("/notes/:id", (req, res) => {
 });
 
 router.post("/notes", (req, res) => {
-  // set id based on what the next index of the array will be
   console.log(getAllNotes().notes);
   req.body.id = getAllNotes().notes.length;
 

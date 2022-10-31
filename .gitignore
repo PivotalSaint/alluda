@@ -105,3 +105,6 @@ dist
 
 .vscode
 
+.views
+
+.DS_Store

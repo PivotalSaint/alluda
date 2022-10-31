@@ -48,6 +48,10 @@
           Journal Log
         </button>
         
+        <button id="applyBtn" class="btn btn-info button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6" 
+        href="/about-us" id="applyBtn"
+        {{#if deadlinePassed}} disabled {{/if}}>About Us</button>
+        
         <nav>
           {{#if loggedIn}}
           <a href="/dashboard">dashboard</a>
@@ -56,20 +60,6 @@
           <a href="/login">login</a>
           {{/if}}
         </nav>
-
-        <button id="applyBtn" 
-          {{#if deadlinePassed}} 
-          diabled
-          {{else}}
-          <a href="/login">login</a>
-          {{/if}}
-
-          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6 btn btn-info"
-          href="/public/assets/about-us.html">
-
-          About Us
-
-        </button>
 
       </nav>
 
@@ -115,12 +105,12 @@
       </div>
     </footer>
 
-    <script href="/server.js"></script>
+    <script href="../../server.js"></script>
     
   </body>
 
 </html>
 
 {{#if loggedIn}}
-<script src="/javascript/logout.js"></script>
+<script src="../../public/js/logout.js"></script>
 {{/if}}
