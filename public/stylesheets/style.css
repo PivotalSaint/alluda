@@ -1176,3 +1176,20 @@ body {
 #hptitle {
   background-color: #e2f3ff;
 }
+
+#bodyClr {
+  background-image: none;
+  background-color: rgb(230, 224, 236);
+}
+
+
+#hp-text {
+  text-align: center;
+  margin-left: 30%;
+
+}
+
+#signform{
+  margin: 0px 700px 0px 700px;
+  
+}
