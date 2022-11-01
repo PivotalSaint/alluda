@@ -1,5 +1,5 @@
 :root {
-  --primary: #123859;
+  --primary: #0d3c65;
   --secondary: #419fd9;
   --tertiary: #03738c;
   --quaternary: #8c7503;
@@ -1191,5 +1191,10 @@ body {
 
 #signform{
   margin: 0px 700px 0px 700px;
+  background-color: rgba(255, 254, 254, 0.5);
   
+}
+
+#mainp{
+  margin: 3px 0 3px 0;
 }

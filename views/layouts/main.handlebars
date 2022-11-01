@@ -8,6 +8,8 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css"
@@ -23,15 +25,15 @@
       class="ml-2 mr-2 title is-size-12 has-text-large is-bold is-info">
 
       <div class="mt-4">
-        <a  class='has-text-left ml-5 has-text-white is-bold title' href='/dashboard'>Alluda</a>
+        <a  class='has-text-left ml-4 has-text-white is-bold title' href='/dashboard'>Alluda</a>
       </div>
 
-     {{#if loggedIn}}
-        <a class="button is-focused is-small is-responsive logout ml-5 mt-5"  href="/dashboard">
+      {{#if loggedIn}}
+        <a class="button is-focused is-small is-responsive logout ml-5 mt-3"  href="/dashboard">
           logout
         </a>
       {{else}}
-        <a class="button is-focused is-small is-responsive  ml-5 mt-5"  href="/login">
+        <a class="button is-focused is-small is-responsive  ml-5 mt-3"  href="/login">
           login
         </a>
       {{/if}}
@@ -73,7 +75,7 @@
 
     <footer class="hero-foot has-background-dark">
       <div class="content has-text-centered has-text-white">
-        <p>
+        <p id="mainp">
           <strong class="has-text-white">Mental Health Advocates</strong>:
           <a href="https://github.com/Angel-A15">Angel</a>,<a
             href="https://github.com/mmarsch88"

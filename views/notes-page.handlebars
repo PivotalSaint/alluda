@@ -1,25 +1,30 @@
-
+  <header>
+    <link rel="stylesheet" href="stylesheets/notes.css" />
+  </header>
   <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid has-background-white ">
       <div class="row">
         <div class="col-4 list-container">
-          <div class="card mt-4">
+          <div class="card ">
             <ul class="list-group"></ul>
           </div>
         </div>
         <div class="col-8">
+
           <div class="icons">
             <i class="fas fa-save has-text-black save-note"></i>
             <i class="fas fa-plus has-text-black new-note"></i>
           </div>
+
           <input
-            class="note-title"
+            class="note-title column"
             placeholder="Note Title"
             maxlength="28"
             type="text"
           />
-          <textarea class="note-textarea" placeholder="Note Text"></textarea>
+
+          <textarea class="note-textarea column" placeholder="Note Text"></textarea>
           
         </div>
       </div>
