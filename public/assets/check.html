@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="/public/css/style.css" />
+
+    <title>Alluda Homepage</title>
+
+  </head>
+
+  <body class="hero background is-fullheight" id="body">
+
+    <header
+      class="background is-info hero-head ml-6 mr-6 title 
+      is-size-12 has-text-blue is-bold mt-5 is-info"
+    >
+      <h1 class="columns mt-4 has-text-white is-centered">Alluda!</h1>
+      
+      <nav class="columns is-centered mb-4">
+
+        <!-- links go here -->
+        <button
+          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6">
+          
+          <a href="../layouts/get-help-page.handlebars">
+            Certified Health Providers
+          </a>
+
+        </button>
+
+        <button
+          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6">
+          
+          <a href="../layouts/media-page.handlebars">
+            Media Resources
+          </a>
+
+        </button>
+
+        <button
+          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6">
+          <a href="../layouts/journal-page.handlebars">
+            Journal Log
+          </a>
+        </button>
+
+        <button
+          class="button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6">
+          <a href="../layouts/about-us-page.handlebars">
+            About Us
+          </a>
+        </button>
+        
+        <nav>
+          {{#if loggedIn}}
+          <a href="/dashboard">dashboard</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
+
+        <button id="applyBtn" class="btn btn-info button is-focused is-normal is-responsive mb-2 mr-3 ml-6 mt-6" 
+        href="/about-us" id="applyBtn"
+        {{#if deadlinePassed}} disabled {{/if}}>About Us</button>
+
+      </nav>
+
+    </header>
+
+    <section class="hero-body rows">
+      <div class="row-12">
+        <h1 class="title is-bold is-size-6 has-text-medium has-text-centered">
+          "Aiding in Mental Health Support"
+        </h1>
+        <div class="rows">
+          <p
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+          >
+            Word from the authors: Mental health is a serious issue in today's
+            fast pace society. This application helps in making people put their
+            needs first in their mental health.
+          </p>
+          <p
+            class="row-6 ml-6 mr-6 mt-6 mb-6 subtitle has-text-black col-6 has-text-centered"
+          >
+            Disclaimer: Alluda! is not a certified mental healthcare provider.
+            The authors made this page to help in people finding time to free
+            resources. If you are in actual need of medical help, call 911 or
+            reach out to the proper healthcare providers.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="hero-foot has-background-dark">
+      <div class="content has-text-centered has-text-white">
+        <p>
+          <strong class="has-text-white">Mental Health Advocates</strong>:
+          <a href="https://github.com/Angel-A15">Angel</a>,<a
+            href="https://github.com/mmarsch88"
+            >Matt</a
+          ><a href="https://github.com/PivotalSaint"> Jesse</a>, and
+          <a href="https://github.com/MarkAnthony9014">Mark</a> sourcing:
+          <a href="https://github.com/PivotalSaint/Alluda">GitHub</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script href="../../server.js"></script>
+    
+  </body>
+
+</html>
